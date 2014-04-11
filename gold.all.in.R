@@ -1,3 +1,15 @@
+#Copyright © 2014 Frederick Pelchat
+#
+#This is a rough simulation
+#
+#It assumes that:
+#-The bet is on the long side.
+#
+#It doesnt take into account:
+#-Intraday price action;
+#-Sum of consecutive down days;
+#-Capital fluctuation;
+#-Entry strategy.
 library('xts')
 content <- url('http://dl.dropboxusercontent.com/s/jq18erl5n861b21/gold.daily.prices.csv?dl=1&token_hash=AAEa3HPQDxcQANILqG89Pv5dB_JelBMO1qM8HQPyqBL21A')
 gold.daily.prices <- read.csv(content, sep = '', stringsAsFactors = FALSE)
