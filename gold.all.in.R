@@ -20,7 +20,7 @@ p2p <- lag(dat, 1)
 gold.daily.prices <- merge.xts(dat, as.xts(p2p))
 colnames(gold.daily.prices) <- c('curr', 'prev')
 gold.daily.prices$mov <- ((gold.daily.prices$curr - gold.daily.prices$prev) / gold.daily.prices$prev) * 100
-bust.all.in.50.to.1 <- gold.daily.prices[gold.daily.prices$mov <= -2.0]
-bust.all.in.500.to.1 <- gold.daily.prices[gold.daily.prices$mov <= -0.2]
+bust.all.in.50.to.1 <- gold.daily.prices[gold.daily.prices$mov <= -2.0] #-(1 / 50 * 100)
+bust.all.in.500.to.1 <- gold.daily.prices[gold.daily.prices$mov <= -0.2] #-(1 / 500 * 100)
 tail(bust.all.in.50.to.1, 50)
 tail(bust.all.in.500.to.1, 50)
