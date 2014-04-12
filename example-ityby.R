@@ -1,5 +1,4 @@
-#Example 1
-#ITYBY:OTC; tick data aggregated to intraday 5 mins; last 9 days; line chart
+#Example: ITYBY:OTC; tick data aggregated to intraday 5 mins; last 9 days; line chart
 source('intraday-data.R')
 ticker <- 'ITYBY'
 market <- 'OTC'
@@ -17,4 +16,3 @@ group <- rbind(
 intra <- f.aggr.5m(group)
 head(intra, 10)
 lineChart(intra, multi.col = TRUE, theme = 'black')
-
